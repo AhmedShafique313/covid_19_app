@@ -5,7 +5,8 @@ A new Flutter project.
 ## Getting Started
 
 This project is a starting point for a Flutter application.
-Now I installed many packages in this Covid 19 project. 
+Now I installed many packages in this Covid 19 project.
+Added Images in the project. 
 
 A few resources to get you started if this is your first Flutter project:
 
