@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Covid-19 Cases Tracker App",
       theme: ThemeData(brightness: Brightness.dark, primarySwatch: Colors.blue),
       home: const SplashScreen(),
