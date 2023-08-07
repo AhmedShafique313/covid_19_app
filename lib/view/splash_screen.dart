@@ -18,27 +18,29 @@ class _SplashScreenState extends State<SplashScreen>
   late final AnimationController _controller =
       AnimationController(duration: const Duration(seconds: 3), vsync: this)
         ..repeat();
+
   @override
-  void initstate() {
+  void initState() {
     super.initState();
     Timer(
-        const Duration(seconds: 5),
-        () => Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => const WorldStatusScreen())));
+      const Duration(seconds: 5),
+      () => Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const WorldStatusScreen()),
+      ),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-          child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            AnimatedBuilder(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              AnimatedBuilder(
                 animation: _controller,
                 builder: (BuildContext context, Widget? child) {
                   return Transform.rotate(
@@ -53,30 +55,33 @@ class _SplashScreenState extends State<SplashScreen>
                   child: const Center(
                     child: Image(image: AssetImage('images/virus.png')),
                   ),
-                )),
-            const SizedBox(
-              height: 20,
-            ),
-            const Text(
-              'Covid-19 Cases',
-              style: TextStyle(
-                color: Colors.deepOrange,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                fontStyle: FontStyle.italic,
+                ),
               ),
-            ),
-            const Text(
-              'Tracker App',
-              style: TextStyle(
+              const SizedBox(
+                height: 20,
+              ),
+              const Text(
+                'Covid-19 Cases',
+                style: TextStyle(
+                  color: Colors.deepOrange,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+              const Text(
+                'Tracker App',
+                style: TextStyle(
                   color: Colors.deepOrange,
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  fontStyle: FontStyle.italic),
-            )
-          ],
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+            ],
+          ),
         ),
-      )),
+      ),
     );
   }
 }
