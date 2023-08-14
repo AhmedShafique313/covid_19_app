@@ -63,11 +63,11 @@ class _SplashScreenState extends State<SplashScreen>
               const Text(
                 'Covid-19 Cases',
                 style: TextStyle(
-                  color: Colors.deepOrange,
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  fontStyle: FontStyle.italic,
-                ),
+                    color: Colors.deepOrange,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                    fontFamily: 'DancingScript'),
               ),
               const Text(
                 'Tracker App',
