@@ -2,6 +2,8 @@
 
 import 'dart:async';
 
+import 'package:covid_19_app/view/countires_list.dart';
+import 'package:covid_19_app/view/details_screen.dart';
 import 'package:covid_19_app/view/world_status.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
@@ -26,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen>
       const Duration(seconds: 5),
       () => Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => const WorldStatusScreen()),
+        MaterialPageRoute(builder: (context) => WorldStatusScreen()),
       ),
     );
   }
